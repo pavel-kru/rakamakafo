@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/map.css">
+    <link rel="stylesheet" href="css/main.css">
+   </head>
+<body>
+ <input type="radio" id="button1" name="toggle" class="hidden" checked>
+ <input type="radio" id="events" name="toggle" class="hidden" >
+ <input type="radio" id="search" name="toggle" class="hidden" >
+    <header id="map"  class="map map-transform"">
+    <div id="to-hide" class="to-hide">
+      <div class="svg-top-left"></div>
+      <div class="svg-top-right"></div>
+      <div class="france">France</div>
+      <div class="spain">Spain</div>
+      <label for="events" class="events"> 
+       <div id="counter"></div>
+      </label>
+      <label for="search" class="search" "></label>
+    </div>  
+    <div id="hidden1" class="hidden">
+      <div id="capital" class="capital capitalChange">Amsterdam</div>
+      <label for="button1" class="rectangle-btn"></label>
+    </div>
+  </header>
+  <main class="feed">
+    
+    <ul>
+     
+      <li class="temple">
+        
+        <label for="check1"></label>
+        <figure>
+          <div class="event-image"></div>
+           <figcaption>
+             <input type="checkbox" id="check1" >
+             <label for="check1"></label>
+             <cite class="title-event title-event-special">King or queen of the circle 2018</cite>
+             <p class="author author-transform">13 October</p>
+         </figcaption>
+        </figure>
+    </li>
+        <li class="temple">
+            <input type="checkbox" id="check2" checked>
+            <label for="check2"></label>
+            <figure id="transform1">
+              <div class="event-image"></div> 
+               <figcaption>
+                 <cite class="title-event" id="title-event">Temple rock: 5 year anniversary 2018</cite>
+                 <p id="author" class="author author-transform"">12 October</p>
+             </figcaption>
+            </figure>
+        </li>
+        <li class="temple">
+          <input type="checkbox" id="check3">
+          <label for="check3"></label>
+          <figure>
+            <div class="event-image"></div> 
+             <figcaption>
+               <cite class="title-event">Temple rock: 5 year anniversary 2018</cite>
+               <p class="author author-transform">11 October</p>
+           </figcaption>
+          </figure>
+      </li>
+      <li class="temple">
+        <input type="checkbox" id="check4">
+        <label for="check4"></label>
+        <figure>
+           <div class="event-image"></div> 
+           <figcaption>
+             <cite class="title-event">Temple rock: 5 year anniversary 2018</cite>
+             <p class="author author-transform">10 October</p>
+         </figcaption>
+        </figure>
+    </li>
+    </ul>
+ 
+</main>
+  <footer>
+    <nav>
+      <ul class="navigation">
+          <li><a href="index.html"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+          <li><a href="#"></a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/map.js"></script>
+ </body>
+</html>

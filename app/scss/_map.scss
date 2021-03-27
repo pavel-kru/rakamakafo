@@ -1,0 +1,189 @@
+
+
+.map-container {
+  position: relative;
+  width: 520px;
+  height: 100%;
+  font-family: "SF-Compact-Display-Regular";
+  color: #999999;
+  z-index: 0;
+}
+
+#map {
+  width: 320px;
+  height: 520px;
+}
+
+#events:checked ~ .map-transform,
+#search:checked ~ .map-transform {
+  height: 160px;
+  /* background: url(../images/src/mapTransform.png) no-repeat; */
+  margin-bottom: -20px;
+  z-index: -1;
+  animation: all 0.9s ease-out;
+}
+@keyframes all {
+  0% {
+    transform: scale(0.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.map-container .to-hide {
+  position: absolute;
+  /* z-index: 10000; */
+}
+
+.map-container .events,
+.map-container .search {
+  position: absolute;
+  display: block;
+  bottom: 20px;
+  z-index: 100000;
+}
+
+.map-container .events {
+  width: 42px;
+  height: 42px;
+  bottom: 20px;
+  left: 24px;
+  background: url(../images/src/GroupLeftBottom.svg) no-repeat center,
+    url(../images/src/EllipseBottom.svg) no-repeat center 2px;
+  background-size: 16px 15px, 42px;
+}
+
+.counter-events-header {
+  display: inline-block;
+  position: absolute;
+  left: 30px;
+  top: 0px;
+  @include font("SFCompact", 600, 8rem/14);
+  line-height: 14px;
+  text-align: center;
+  border-radius: 50%;
+  color: $white;
+  width: 15px;
+  height: 15px;
+  background: $events;
+}
+
+.map-container .search {
+  width: 42px;
+  height: 42px;
+  left: 254px;
+  background: url(../images/src/nearest.svg) no-repeat center, url(../images/src/EllipseBottom.svg) no-repeat center 2px;
+  background-size: 13px 18px, 42px;
+}
+
+.map-container label:not(label[for="button1"]):hover {
+  animation: roll 3s infinite;
+  cursor: pointer;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.map-container .capital {
+  position: absolute;
+  top: 40px;
+  left: 24px;
+  @include font("SFCompact", 600, 26rem/14);
+  color: $white;
+}
+
+.map-container .capital::after {
+  display: block;
+  margin-top: 11px;
+  content: "Netherlands";
+  font-family: "SF-Compact-Display-Regular";
+  font-size: 14px;
+  line-height: 16.41px;
+  color: #d5d5d5;
+  font-weight: bolder;
+}
+
+.map-container .capital.capitalChange::after {
+  content: "232 Upcoming Events";
+}
+
+.map-container .rectangle-btn {
+  display: block;
+  position: absolute;
+  left: 144px;
+  top: 125px;
+  width: 32px;
+  height: 20px;
+  background: url(../images/src/mapRectangle.svg) no-repeat;
+  transition: all 0.5s ease-in-out;
+  z-index: 100000;
+}
+
+label[for="button1"]:hover {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+#events:checked ~ .feed,
+#search:checked ~ .feed {
+  display: block;
+  animation: translating 0.9s ease-out;
+}
+
+@keyframes translating {
+  0% {
+    transform: translateY(600px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+
+.feed-map {
+  border-radius: 15px 15px 0 0;
+  margin: 0;
+  .feed__article_event {
+    padding-left: 12px;
+    height: 216px;
+    .content__title_event {
+      display: flex;
+      flex-direction: column-reverse;
+      left: 72px;
+      top: 41px;
+      @include font("SFCompact", 600, 22rem/14);
+      line-height: 29.7px;
+    }
+    // {display: block;
+    // content: "Buenos Aires, Argentina"}
+
+    .special {
+      @include font("UniNeu", 600, 18rem/14);
+      line-height: 21.48px;
+    }
+  }
+  .bookmark_event-new {
+    background: url("../images/dest/chLabel.svg") no-repeat 0 24px;
+    background-size: 11px 11px;
+  }
+}
+
+.footer-map {
+  position: relative;
+}
+
+.gmnoprint a,
+.gmnoprint span {
+  display: none;
+}
+.gmnoprint div {
+  background: none !important;
+}

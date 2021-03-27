@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Map</title>
+  <link rel="stylesheet" href="css/app.min.css">
+</head>
+
+<body>
+  <input type="radio" id="button1" name="toggle" class="hidden" checked>
+  <input type="radio" id="events" name="toggle" class="hidden">
+  <input type="radio" id="search" name="toggle" class="hidden">
+  <header class="map-container map-transform">
+    <div id="map"></div>
+    <div id="to-hide" class="to-hide">
+      <label for="events" class="events">
+        <span id="counter-events-header" class="counter-events-header"></span>
+      </label>
+      <label for="search" class="search" "></label>
+    </div>  
+    <div id="hidden1" class="hidden">
+        <div id="capital" class="capital capitalChange">Amsterdam</div>
+        <label for="button1" class="rectangle-btn"></label>
+    </div>
+  </header>
+  <main class="feed feed-map hidden">
+    <article class="feed__article feed__article_event">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/break.png" alt="King or queen of the circle 2018" class="content__img content__img_event">
+        <cite class="content__title content__title_event special">King or queen of the <br> circle 2018</cite>
+        <p class="content__description content__description_event"><span class="event-date"></span></p>
+    </article>
+    <article class="feed__article feed__article_event">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/temple-rock.png" alt="King or queen of the circle 2018"
+          class="content__img content__img_event">
+        <cite class="content__title content__title_event ">Temple rock: 5 year<br />anniversary 2018</cite>
+        <p class="content__description content__description_event"><span class="event-date"></span></span></p>
+    </article>
+    <article class="feed__article feed__article_event">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/soul.png" alt="King or queen of the circle 2018" class="content__img content__img_event">
+        <cite class="content__title content__title_event">Soul Rockerz 20</cite>
+        <p class="content__description content__description_event"><span class="event-date"></span></p>
+    </article>
+    <article class="feed__article feed__article_event">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/Rockland.png" alt="King or queen of the circle 2018"
+          class="content__img content__img_event">
+        <cite class="content__title content__title_event">Rockland's 10 year</cite>
+        <p class="content__description content__description_event"><span class="event-date"></span></p>
+    </article>
+
+  </main>
+  <footer class="footer footer-map">
+    <nav>
+      <ul class="navigation">
+        <li><a href="index.html" class="navigation__link navigation__link_main"></a></li>
+        <li><a href="#" class="navigation__link navigation__link_map" active><span id="counter-events-footer"
+              class="link-map_events">16</span></a>
+        </li>
+        <li><a href="#" class="navigation__link navigation__link_search"></a></li>
+        <li><a href="#" class="navigation__link navigation__link_profile"></a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/mapCustomize.js"></script>
+  <script defer src="js/map.js"></script>
+  <script src="js/app.min.js"></script>
+   <script defer async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-Lib_-NEJLPpXe3uxnIl7f9Ua6vlBMag&callback=initMap">
+    </script>
+    
+
+</body>
+
+</html>

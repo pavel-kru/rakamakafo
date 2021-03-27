@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakamafo</title>
+  <link rel="stylesheet" href="css/app.min.css">
+  <!-- <link rel="stylesheet" href="css/audio.css"> -->
+</head>
+
+<body>
+  <header class="slider">
+    <input type="radio" id="btn-1" name="toggle" checked>
+    <input type="radio" id="btn-2" name="toggle">
+    <input type="radio" id="btn-3" name="toggle">
+    <input type="radio" id="btn-4" name="toggle">
+    <div class="slider-controls">
+      <label for="btn-1"></label>
+      <label for="btn-2"></label>
+      <label for="btn-3"></label>
+    </div>
+    <h1 class="slider-slides__title"></h1>
+    <p class="slider-slide__upper-description upper-description_hottest">Hottest</p>
+    <p class="slider-slide__upper-description upper-description_nearest">Nearest</p>
+    <p class="slider-slide__upper-description upper-description_tour">Tour</p>
+    <a href="map.html" class="slider-slide__description description_map"></a>
+    <a href="#" class="slider-slide__description description_details"></a>
+    <label for="btn-4" class="slider-slide__description"></label>
+    <a href="#" class="slider-slide__description description_tour"></a>
+    <div class="slider-inner">
+      <div class="slider-slides">
+        <img src="images/dest/map.png" alt="16 new events" class="slider-slide__img img-events">
+        <img src="images/dest/image (2).png" alt="Temple rock" class="slider-slide__img">
+        <img src="images/dest/image (3).png" alt="Drop the beat 3" class="slider-slide__img">
+        <img src="images/dest/map.png" alt="Tour Minsk – Vilnius" class="slider-slide__img img-tour">
+      </div>
+    </div>
+  </header>
+  <main class="feed">
+        <h2 class="feed__title">Feed</h2>
+    <article class="feed__article feed__article_audio">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/image.png" alt="Surreal soulja 2" class="content__img content__img_music">
+        <cite class="content__title content__title_music">Surreal soulja 2</cite>
+        <cite class="content__description content__description_music">Cashcurt</cite>
+      </div>
+    </article>
+    <article class="feed__article feed__article_audio">
+      <audio src="music/645AR.mp3" id="media1"></audio>
+      <div class="feed__article_bookmark bookmark_checked"></div>
+      <div class="article__content">
+        <img src="images/dest/645AR.png" alt="645AR - Workin ft. 10kDug" class="content__img content__img_music">
+        <cite class="content__title content__title_music"">645AR - Workin ft. 10kDug...</cite>
+            <cite class=" content__description content__description_music">Beez Exclusivez</cite>
+    </article>
+    <article class="feed__article feed__article_video">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/Hon.png" alt="Final battle: Issei VS Hong 10 Red Bull BC One.."
+          class="content__img content__img_video">
+        <cite class="content__title content__title_video">Final battle: Issei VS Hong 10 Red Bull BC One..</cite>
+        <p class="content__description content__description_video">48:23</p>
+    </article>
+    <article class="feed__article feed__article_event">
+      <h3 class="event-title">Bboy Event</h3>
+      <div class="feed__article_bookmark bookmark_checked"></div>
+      <div class="article__content">
+        <img src="images/dest/break.png" alt="King or queen of the circle 2018" class="content__img content__img_event">
+        <cite class="content__title content__title_event">King or queen of the <br> circle 2018</cite>
+        <p class="content__description content__description_event">Houston, United States <span class="event-date">13
+            October</span></p>
+    </article>
+    <article class="feed__article feed__article_audio">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/kai$oundz.png" width="80px" alt="kai$oundz & Lil Gucci Le..."
+          class="content__img content__img_music">
+        <cite class="content__title content__title_music"">kai$oundz & Lil Gucci Le...</cite>
+            <cite class=" content__description content__description_music">kai$oundz</cite>
+    </article>
+    <article class="feed__article feed__article_audio">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/image.png" alt="Surreal soulja 2" class="content__img content__img_music">
+        <cite class="content__title content__title_music">Surreal soulja 2</cite>
+        <cite class="content__description content__description_music">Cashcurt</cite>
+      </div>
+    </article>
+    <article class="feed__article feed__article_video">
+      <div class="feed__article_bookmark"></div>
+      <div class="article__content">
+        <img src="images/dest/image 2.png" width="189.84px" alt="Final battle: Issei VS Hong 10 Red Bull BC One.."
+          class="content__img content__img_video">
+        <cite class="content__title content__title_video">Final battle: Issei VS Hong 10 Red Bull BC One..</cite>
+        <p class="content__description content__description_video">48:23</p>
+    </article>
+    <div id="audio" class='audio__container hidden'>
+      <button id="playButton" class="hidden"></button>
+      <button id="stopButton" class="hidden"> </button>
+      <label for="playButton" class='playBut'>
+        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="60.7px" height="60.7px"
+          viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+          <polygon class='triangle' id="XMLID_18_" fill="white" stroke-width="7" stroke-linecap="round"
+            stroke-linejoin="round" stroke-miterlimit="10" points="
+73.5,62.5 148.5,105.8 73.5,149.1 " />
+          <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
+            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
+        </svg>
+      </label>
+      <label for="stopButton" class='stopBut'>
+        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In  -->
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="60.7px" height="60.7px"
+          viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7" xml:space="preserve">
+
+          <polygon class='rect' id="XMLID_18_" fill="white" stroke-width="7" stroke-linecap="round"
+            stroke-linejoin="round" stroke-miterlimit="10" points="
+  73.5,73.5 148.5,73.5 148.5,149.1 73.5,149.1" />
+
+          <circle class='circle' id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
+            stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3"
+            transform="rotate(180, 106.8,106.8)" />
+        </svg>
+      </label>
+    </div>
+  </main>
+  <footer class="footer">
+    <nav>
+      <ul class="navigation">
+        <li><a href="#" class="navigation__link navigation__link_main"></a></li>
+        <li><a href="map.html" class="navigation__link navigation__link_map"><span class="link-map_events">16</span></a>
+        </li>
+        <li><a href="#" class="navigation__link navigation__link_search"></a></li>
+        <li><a href="#" class="navigation__link navigation__link_profile"></a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/app.min.js"></script>
+  <!-- <script src="js/main.js"></script> -->
+</body>
+
+</html>

@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 }),
   feedArticlesMap.forEach((e) =>
     e.addEventListener("click", function () {
-      e.querySelector(".bookmark_event-new")
+      e
+        .querySelector(".bookmark_event-new")
         .classList.remove("bookmark_event-new"),
         newEvents > 0 && newEvents--,
         (linkNumberOfNewEvents.textContent = newEvents),
@@ -44,8 +45,8 @@ searchBtn.addEventListener("click", function () {
     capital.classList.remove("capitalChange");
   let date = 13;
   for (let i = 0; i < feedArticlesMap.length; i++)
-    (contentDescription[t].firstChild.textContent = ""),
-      (contentDate[t].textContent = date + " October"),
+    (contentDescription[i].firstChild.textContent = ""),
+      (contentDate[i].textContent = date + " October"),
       date--;
 }),
   eventsBtn.addEventListener("click", function () {
@@ -53,9 +54,10 @@ searchBtn.addEventListener("click", function () {
       (capital.textContent = "Events"),
       capital.classList.add("capitalChange");
     for (let i = 0; i < feedArticlesMap.length; i++)
-      contentDescription[i].prepend(eventLocation),
-        (contentDate[i].textContent = "13 October");
-  }),
+      !contentDescription[i].textContent.includes(eventLocation) &&
+        contentDescription[i].prepend(eventLocation),
+        (contentDate[i].textContent = "13 October")
+         }),
   button1.addEventListener("click", function () {
     toggleMap();
   });

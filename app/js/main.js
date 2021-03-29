@@ -2,6 +2,7 @@ const feeds = document.querySelector(".feed"),
   feedArticles = feeds.querySelectorAll(".feed__article"),
   media = document.querySelector("#media1"),
   wavesClass = "article__content_waves";
+
 function toggleContent(e, t) {
   e.forEach((e) => {
     e.classList.remove("feed__article_onclick"),
@@ -12,6 +13,7 @@ function toggleContent(e, t) {
         : e.classList.add("hidden");
   });
 }
+
 feedArticles.forEach((e) =>
   e.addEventListener("click", function () {
     e.classList.add("feed__article_onclick");
@@ -28,6 +30,7 @@ feedArticles.forEach((e) =>
       );
   })
 );
+
 const feedsChildren = [...feeds.children],
   buttonToggle1 = document.getElementById("btn-1"),
   buttonToggle2 = document.getElementById("btn-2"),
@@ -35,39 +38,46 @@ const feedsChildren = [...feeds.children],
   buttonToggle4 = document.getElementById("btn-4"),
   footer = document.querySelector(".footer"),
   audio = document.querySelector(".audio__container");
+
 buttonToggle2.addEventListener("click", function () {
   media.play(),
     toggleContent(feedsChildren, "feed__article_audio"),
     footer.classList.add("hidden"),
     audio.classList.remove("hidden");
+});
+
+buttonToggle3.addEventListener("click", function () {
+  media.pause(),
+    toggleContent(feedsChildren, "feed__article_video"),
+    footer.classList.add("hidden"),
+    audio.classList.remove("hidden");
+});
+
+buttonToggle4.addEventListener("click", function () {
+  media.pause(),
+    toggleContent(feedsChildren, "feed__article_event"),
+    footer.classList.add("hidden");
+});
+
+buttonToggle1.addEventListener("click", function () {
+  media.pause(),
+    footer.classList.remove("hidden"),
+    feedsChildren.forEach((e) => {
+      e.classList.remove("hidden", "feed__article_onclick");
+    }),
+    audio.classList.add("hidden");
 }),
-  buttonToggle3.addEventListener("click", function () {
-    media.pause(),
-      toggleContent(feedsChildren, "feed__article_video"),
-      footer.classList.add("hidden"),
-      audio.classList.remove("hidden");
-  }),
-  buttonToggle4.addEventListener("click", function () {
-    media.pause(),
-      toggleContent(feedsChildren, "feed__article_event"),
-      footer.classList.add("hidden");
-  }),
-  buttonToggle1.addEventListener("click", function () {
-    media.pause(),
-      footer.classList.remove("hidden"),
-      feedsChildren.forEach((e) => {
-        e.classList.remove("hidden", "feed__article_onclick");
-      }),
-      audio.classList.add("hidden");
-  }),
   document.addEventListener("keydown", function (e) {
     (27 !== e.which && 32 !== e.which) || media.pause();
   });
+
 const playButton = document.getElementById("playButton"),
   stopButton = document.getElementById("stopButton");
+
 playButton.addEventListener("click", function () {
   media.play();
-}),
-  stopButton.addEventListener("click", function () {
-    media.pause();
-  });
+});
+
+stopButton.addEventListener("click", function () {
+  media.pause();
+});

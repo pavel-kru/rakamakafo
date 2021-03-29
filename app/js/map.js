@@ -11,9 +11,11 @@ const mapHeader = document.getElementById("map"),
 let newEvents = document.querySelectorAll(".bookmark_event-new").length;
 const linkNumberOfNewEvents = document.getElementById("counter-events-footer"),
   buttonNumberOfNewEvents = document.getElementById("counter-events-header");
+
 function toggleMap() {
   toHide.classList.toggle("hidden"), hiddenToShow.classList.toggle("hidden");
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   feedArticlesMap.forEach((e) => {
     e.querySelector(".feed__article_bookmark").classList.add(
@@ -23,22 +25,25 @@ document.addEventListener("DOMContentLoaded", () => {
     (newEvents = feedArticlesMap.length),
     (linkNumberOfNewEvents.textContent = newEvents),
     (buttonNumberOfNewEvents.textContent = newEvents);
-}),
-  feedArticlesMap.forEach((e) =>
-    e.addEventListener("click", function () {
-      e
-        .querySelector(".bookmark_event-new")
-        .classList.remove("bookmark_event-new"),
-        newEvents > 0 && newEvents--,
-        (linkNumberOfNewEvents.textContent = newEvents),
-        (buttonNumberOfNewEvents.textContent = newEvents);
-    })
-  );
+});
+
+feedArticlesMap.forEach((e) =>
+  e.addEventListener("click", function () {
+    e
+      .querySelector(".bookmark_event-new")
+      .classList.remove("bookmark_event-new"),
+      newEvents > 0 && newEvents--,
+      (linkNumberOfNewEvents.textContent = newEvents),
+      (buttonNumberOfNewEvents.textContent = newEvents);
+  })
+);
+
 const contentDescription = document.querySelectorAll(
     ".content__description_event"
   ),
   contentDate = document.querySelectorAll(".event-date");
 let eventLocation = "Buenos Aires, Argentina";
+
 searchBtn.addEventListener("click", function () {
   toggleMap(),
     (capital.textContent = "Amsterdam"),
@@ -48,16 +53,18 @@ searchBtn.addEventListener("click", function () {
     (contentDescription[i].firstChild.textContent = ""),
       (contentDate[i].textContent = date + " October"),
       date--;
-}),
-  eventsBtn.addEventListener("click", function () {
-    toggleMap(),
-      (capital.textContent = "Events"),
-      capital.classList.add("capitalChange");
-    for (let i = 0; i < feedArticlesMap.length; i++)
-      !contentDescription[i].textContent.includes(eventLocation) &&
-        contentDescription[i].prepend(eventLocation),
-        (contentDate[i].textContent = "13 October")
-         }),
-  button1.addEventListener("click", function () {
-    toggleMap();
-  });
+});
+
+eventsBtn.addEventListener("click", function () {
+  toggleMap(),
+    (capital.textContent = "Events"),
+    capital.classList.add("capitalChange");
+  for (let i = 0; i < feedArticlesMap.length; i++)
+    !contentDescription[i].textContent.includes(eventLocation) &&
+      contentDescription[i].prepend(eventLocation),
+      (contentDate[i].textContent = "13 October");
+});
+
+button1.addEventListener("click", function () {
+  toggleMap();
+});

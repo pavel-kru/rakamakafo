@@ -3,10 +3,10 @@ const feeds = document.querySelector(".feed"),
   media = document.querySelector("#media1"),
   wavesClass = "article__content_waves";
 
-function toggleContent(e, t) {
-  e.forEach((e) => {
+function toggleContent(array, className) {
+ array.forEach((e) => {
     e.classList.remove("feed__article_onclick"),
-      e.classList.contains(t)
+      e.classList.contains(className)
         ? (e.classList.remove("hidden"),
           e.querySelector(".bookmark_checked") &&
             setTimeout(() => e.classList.add("feed__article_onclick"), 100))
@@ -66,7 +66,8 @@ buttonToggle1.addEventListener("click", function () {
       e.classList.remove("hidden", "feed__article_onclick");
     }),
     audio.classList.add("hidden");
-}),
+});
+
   document.addEventListener("keydown", function (e) {
     (27 !== e.which && 32 !== e.which) || media.pause();
   });

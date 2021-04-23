@@ -4,7 +4,7 @@ const feeds = document.querySelector(".feed"),
   wavesClass = "article__content_waves";
 
 function toggleContent(array, className) {
-  array.forEach((e) => {
+ array.forEach((e) => {
     e.classList.remove("feed__article_onclick"),
       e.classList.contains(className)
         ? (e.classList.remove("hidden"),
@@ -68,9 +68,10 @@ buttonToggle1.addEventListener("click", function () {
     audio.classList.add("hidden");
 });
 
-document.addEventListener("keydown", function (e) {
-  (27 !== e.which && 32 !== e.which) || media.pause();
-});
+
+  document.addEventListener("keydown", function (e) {
+    (27 !== e.which && 32 !== e.which) || media.pause();
+  });
 
 const playButton = document.getElementById("playButton"),
   stopButton = document.getElementById("stopButton");

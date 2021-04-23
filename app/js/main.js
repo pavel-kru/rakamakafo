@@ -68,6 +68,7 @@ buttonToggle1.addEventListener("click", function () {
     audio.classList.add("hidden");
 });
 
+
   document.addEventListener("keydown", function (e) {
     (27 !== e.which && 32 !== e.which) || media.pause();
   });
